@@ -6,9 +6,10 @@ Q2-Que se passe-t-il si deux utilisateurs ont le même nom ? Comment éviter un 
 --> if faut ajouter une proprietaire_id par exemple(cin , cne..)
 
 Q3-Comment vérifier que l'examen existe avant d'ajouter la question ?
-
+--> on peut utiliser un try except pour vérifier si l'examen existe ou non.
 
 Q4-Peut-on empêcher l'ajout d'une question sans proposition correcte ?
+--> on peut ajouter une condition pour vérifier si la proposition est correcte ou non.
 
 Q5-omment afficher dynamiquement les questions de chaque examen ?
 document.getElementById('examens-select').addEventListener('change', function () {
