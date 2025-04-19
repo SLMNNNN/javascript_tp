@@ -1,5 +1,4 @@
-// TODO : Ajouter un écouteur d'événement pour ajouter des propositions
-dynamiquement
+// TODO : Ajouter un écouteur d'événement pour ajouter des propositions dynamiquement
 document.getElementById('add-proposition').addEventListener('click', () => {
     const container = document.createElement('div');
     const input = document.createElement('input');

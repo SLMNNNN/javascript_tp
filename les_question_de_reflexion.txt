@@ -1,0 +1,30 @@
+
+Q1-Comment gérer plusieurs examens pour un même propriétaire ?
+--> 
+
+Q2-Que se passe-t-il si deux utilisateurs ont le même nom ? Comment éviter un conflit ?
+--> if faut ajouter une proprietaire_id par exemple(cin , cne..)
+
+Q3-Comment vérifier que l'examen existe avant d'ajouter la question ?
+
+
+Q4-Peut-on empêcher l'ajout d'une question sans proposition correcte ?
+
+Q5-omment afficher dynamiquement les questions de chaque examen ?
+document.getElementById('examens-select').addEventListener('change', function () {
+    const examenId = this.value;
+    fetch(`/api/examens/${examenId}/questions`)
+      .then(res => res.json())
+      .then(questions => {
+        const container = document.getElementById('questions-container');
+        container.innerHTML = '';
+        questions.forEach(q => {
+          const div = document.createElement('div');
+          div.textContent = q.contenu;
+          container.appendChild(div);
+        });
+      });
+  });
+
+Q6-Que faire si le propriétaire n’a pas d'examen enregistré ?
+--> afficher un message d'erreur ou un bouton pour ajouter un examen 
